@@ -1,0 +1,16 @@
+{
+  "name": "shotbyjulian",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Photography portfolio that picks up every image dropped into shotbyjulian/.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-photos.mjs",
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist"
+  }
+}
