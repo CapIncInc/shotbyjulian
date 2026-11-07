@@ -133,11 +133,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 
 .hero__media {
+  --clip-t: 40%;
+  --clip-r: 12%;
+  --clip-b: 20%;
+  --clip-l: 12%;
+  --clip-radius: 18px;
   position: absolute;
   inset: 0;
   overflow: hidden;
   background: #0b0b0c;
-  clip-path: inset(40% 12% 20% 12% round 18px);
+  clip-path: inset(var(--clip-t) var(--clip-r) var(--clip-b) var(--clip-l) round var(--clip-radius));
 }
 
 .hero__media img {
@@ -158,7 +163,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .hero__title {
   margin: 0;
-  font-size: clamp(2.9rem, 9.2vw, 9.4rem);
+  font-size: clamp(2.35rem, 11vw, 9.4rem);
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -0.05em;
@@ -350,7 +355,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .contact__mail {
   display: inline-block;
   position: relative;
-  font-size: clamp(1.5rem, 5.4vw, 4.4rem);
+  font-size: clamp(1.15rem, 5.2vw, 4.4rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.1;
@@ -478,6 +483,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 @media (max-width: 639px) {
   .grid { columns: 1; }
   .hero { height: 200vh; }
+  .hero__media { --clip-t: 38%; --clip-r: 8%; --clip-b: 24%; --clip-l: 8%; --clip-radius: 14px; }
   .chapter { height: 140vh; }
   .hero__copy { padding-top: calc(var(--nav-h) + 5vh); }
   .lb__figure { padding: 56px 16px; }

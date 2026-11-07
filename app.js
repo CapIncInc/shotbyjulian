@@ -222,7 +222,11 @@ function heroScroll(gsap) {
   });
 
   tl.to(els.heroMedia, {
-    clipPath: 'inset(0% 0% 0% 0% round 0px)',
+    '--clip-t': '0%',
+    '--clip-r': '0%',
+    '--clip-b': '0%',
+    '--clip-l': '0%',
+    '--clip-radius': '0px',
     ease: 'none',
     duration: 1,
   }, 0)
