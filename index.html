@@ -3,135 +3,89 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>shotbyjulian — street, cars &amp; the details in between</title>
-<meta name="description" content="Photographs by Julian — cars, streets and the quiet details most people walk past. Updated every time a new frame is added to the archive." />
-<meta name="theme-color" content="#0a0a0b" />
-<meta property="og:title" content="shotbyjulian — photography" />
-<meta property="og:description" content="Cars, streets and the quiet details in between." />
+<title>shotbyjulian</title>
+<meta name="description" content="A growing archive of street, car and detail photography by Julian." />
+<meta name="theme-color" content="#000000" />
+<meta property="og:title" content="shotbyjulian" />
+<meta property="og:description" content="Street, cars and the details in between." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23d9a465' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='600' fill='%23f5f5f7' text-anchor='middle'%3Ej%3C/text%3E%3C/svg%3E" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<a class="skip" href="#work">Skip to the work</a>
+<a class="skip" href="#archive">Skip to the archive</a>
 
-<header class="head" id="siteHead">
-  <a class="brand" href="#top">shotbyjulian<span>.</span></a>
-  <nav class="nav" aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="head-cta" href="#contact">Book a shoot</a>
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">shotbyjulian</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#archive">Archive</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="hero__copy">
-      <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Street &middot; Cars &middot; Details</p>
-      <h1 class="hero__title">
-        <span>Light, chrome</span>
-        <span>and the details</span>
-        <span class="hero__title--em">in between.</span>
-      </h1>
-      <p class="hero__lede">I photograph the things that stop me mid-step — a car catching the last sun, a dog waiting in a doorway, a tree full of sky. No staging. Just whatever the street had going on that day.</p>
-      <div class="hero__actions">
-        <a class="btn" href="#work">
-          See the work
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <p class="hero__meta"><span id="photoCount">—</span> frames in the archive</p>
+  <section class="hero" id="hero">
+    <div class="hero__stage">
+      <div class="hero__media" id="heroMedia">
+        <img id="heroImg" alt="" width="1200" height="1500" />
       </div>
-    </div>
-
-    <div class="hero__frames" aria-hidden="true">
-      <figure class="hero__frame hero__frame--a"><img id="heroA" alt="" width="1200" height="1500" /></figure>
-      <figure class="hero__frame hero__frame--b"><img id="heroB" alt="" width="1200" height="1500" /></figure>
+      <div class="hero__copy">
+        <p class="eyebrow">Photography</p>
+        <h1 class="hero__title">shotbyjulian.</h1>
+        <p class="hero__sub"><span id="photoCount">—</span> photographs. Street, cars and the details in between.</p>
+      </div>
+      <div class="hero__cue" aria-hidden="true"><span></span></div>
     </div>
   </section>
 
-  <section class="section" id="work">
-    <div class="section__head">
-      <div>
-        <p class="eyebrow">Selected work</p>
-        <h2 class="section__title">Every frame,<br /><em>all at once</em></h2>
-      </div>
-      <p class="section__note">Nothing here is arranged in a shoot. It&rsquo;s the archive as it grows — new photographs land at the top the moment they&rsquo;re added.</p>
+  <div class="chapters" id="chapters"></div>
+
+  <section class="archive" id="archive">
+    <div class="archive__head">
+      <h2 class="archive__title">The archive</h2>
+      <p class="archive__count"><span id="archiveCount">—</span> photographs</p>
     </div>
     <div class="grid" id="grid"></div>
   </section>
 
-  <section class="section about" id="about">
-    <div class="about__side">
-      <p class="eyebrow">About</p>
-      <h2 class="section__title section__title--sm">Julian,<br /><em>behind the lens</em></h2>
-    </div>
-    <div class="about__body">
-      <p class="about__lead">I shoot whatever makes a place feel like itself: the chrome on an old hood, a scooter parked in the wrong light, the way a street goes quiet after rain.</p>
-      <p>Most of these frames come from walks, car meets and slow afternoons with a camera in hand. I edit warm and dark, keep the grain, and rarely crop the story out of a picture. If it made me stop, it goes in the archive.</p>
-      <dl class="facts">
-        <div>
-          <dt>Subjects</dt>
-          <dd>Cars, street corners, trees, dogs, whatever catches</dd>
-        </div>
-        <div>
-          <dt>Approach</dt>
-          <dd>Handheld, natural light, no direction</dd>
-        </div>
-        <div>
-          <dt>Open for</dt>
-          <dd>Shoots, collabs, prints</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="section contact" id="contact">
+  <section class="contact" id="contact">
     <p class="eyebrow">Contact</p>
-    <h2 class="contact__title">Let&rsquo;s make<br /><em>something worth looking at.</em></h2>
-    <a class="contact__mail" href="mailto:hello@shotbyjulian.com">
-      hello@shotbyjulian.com
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <p class="contact__note">Shoots, collaborations, prints — or just to say the car looked good.</p>
+    <a class="contact__mail" href="mailto:hello@shotbyjulian.com">hello@shotbyjulian.com</a>
+    <p class="contact__note">Shoots, collaborations, prints.</p>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="footer__row">
-    <p>&copy; <span id="year">2026</span> shotbyjulian</p>
-    <p class="footer__mid">All photographs by Julian</p>
-    <a href="#top">Back to top &uarr;</a>
-  </div>
-  <p class="footer__word" aria-hidden="true">shotbyjulian</p>
+  <p>&copy; <span id="year">2026</span> shotbyjulian</p>
+  <a href="#top">Back to top</a>
 </footer>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer" hidden>
-  <div class="lb__bar">
-    <p class="lb__index" id="lbIndex">—</p>
-    <button class="lb__btn lb__btn--close" id="lbClose" type="button" aria-label="Close viewer">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-  <div class="lb__stage" id="lbStage">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph" hidden>
+  <button class="lb__close" id="lbClose" type="button" aria-label="Close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+  </button>
+  <button class="lb__arrow lb__arrow--prev" id="lbPrev" type="button" aria-label="Previous photograph">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lb__arrow lb__arrow--next" id="lbNext" type="button" aria-label="Next photograph">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lb__figure">
     <img class="lb__img" id="lbImg" alt="" />
-  </div>
-  <div class="lb__foot">
-    <p class="lb__caption" id="lbCaption"></p>
-    <div class="lb__nav">
-      <button class="lb__btn" id="lbPrev" type="button" aria-label="Previous photograph">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="lb__btn" id="lbNext" type="button" aria-label="Next photograph">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
+    <figcaption class="lb__foot">
+      <span id="lbCaption"></span>
+      <span class="lb__count" id="lbCount"></span>
+    </figcaption>
+  </figure>
 </div>
 
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
 <script src="app.js" type="module"></script>
 </body>
 </html>

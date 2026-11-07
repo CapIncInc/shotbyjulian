@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
 const FILES = ['index.html', 'styles.css', 'app.js', 'photos.json'];
+const DIRS = ['shotbyjulian', 'vendor'];
 
 execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'sync-photos.mjs')], { stdio: 'inherit' });
 
@@ -21,7 +22,9 @@ for (const file of FILES) {
   await copyFile(path.join(ROOT, file), path.join(DIST, file));
 }
 
-await cp(path.join(ROOT, 'shotbyjulian'), path.join(DIST, 'shotbyjulian'), { recursive: true });
+for (const dir of DIRS) {
+  await cp(path.join(ROOT, dir), path.join(DIST, dir), { recursive: true });
+}
 await writeFile(path.join(DIST, '.nojekyll'), '');
 
 console.log('✓ dist/ ready to deploy');
